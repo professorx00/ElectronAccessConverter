@@ -10,6 +10,13 @@ function submitForm(e) {
     let trPath = document.getElementById("TRInputFile").files[0].path;
     let tbrFile = document.getElementById("TBRInputFile").files[0].name; 
     let trFile = document.getElementById("TRInputFile").files[0].name;
-    console.log(ipcRenderer);
+    
     ipcRenderer.send('test', [tbrFile,tbrPath,trFile,trPath]);
+    document.getElementById('loader').classList.remove('hide')
+    document.getElementById('form').classList.add('hide');
+    setTimeout(()=>{
+        document.getElementById('loader').classList.add('hide');
+
+        document.getElementById('Completed').classList.remove('hide')
+    },10000)
 }
