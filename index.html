@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <link rel="stylesheet" href="bootstrap.css">
+  <title>CTR Maine Access Converter Program</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="content m-4">
+    <img class="img-fluid" src="./webheader.png" />
+    <hr />
+
+    <form id="form">
+      <div class="form-group">
+        <label for="TBRInputFile">Time Based Report</label>
+        <input type="file" class="form-control-file" id="TBRInputFile" aria-describedby="Time Based Report">
+        <small id="fileHelp" class="form-text text-muted"></small>
+      </div>
+      <div class="form-group">
+        <label for="TRInputFile">Transaction</label>
+        <input type="file" class="form-control-file" id="TRInputFile" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted"></small>
+      </div>
+      <button type="submit" id="process">Process Files</button>
+    </form>
+  </div>
+
+  <!-- You can also require other files to run in this process -->
+
+
+  
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
